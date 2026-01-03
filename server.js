@@ -19,9 +19,9 @@ mongoose
   .catch((err) => console.error("MongoDB connection error:", err));
 
 // Routes
-app.use("/api/urls", require("./routes/urls"));
-app.use("/api/clicks", require("./routes/clicks"));
-app.use("/api/user", require("./routes/user"));
+app.use("/urls", require("./routes/urls"));
+app.use("/clicks", require("./routes/clicks"));
+app.use("/user", require("./routes/user"));
 
 // Redirection Route
 app.get("/:shortUrl", require("./controllers/urlController").redirectUrl);
